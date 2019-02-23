@@ -1,4 +1,4 @@
-# Project 3 - *Quacker*
+Project 3 - *Quacker*
 
 **Quacker** is a basic twitter app to read your tweets.
 
