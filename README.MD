@@ -2,7 +2,7 @@
 
 **Quacker** is a basic twitter app to read your tweets.
 
-Time spent: **3** hours spent in total, 1.5 fixing CocoaPoads and GitHub downloading and Uploading errors
+Time spent: **3** hours spent in total, 1.5 fixing CocoaPoads and GitHub downloading and Uploading errors.
 
 ## User Stories
 
@@ -22,7 +22,7 @@ The following **bonus** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-<br></br>
-<img src="https://i.imgur.com/sQafQSk.gif" width="200">
-<br></br>
-<img src="https://i.imgur.com/sQafQSk.gif" />
+
+
+<img src='https://i.imgur.com/sQafQSk.gif' width=250>
+<img src='https://i.imgur.com/sQafQSk.gif'>
