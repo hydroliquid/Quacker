@@ -210,6 +210,13 @@
                                     <outlet property="delegate" destination="UcW-cM-pg0" id="cyp-eA-UmS"/>
                                 </connections>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1j9-w2-KcK">
+                                <rect key="frame" x="352" y="241" width="36" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.72628348220000005" green="0.97642299109999997" blue="0.98367745539999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.59849330359999997" green="0.0" blue="0.98367745539999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -230,6 +237,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="charCountLabel" destination="1j9-w2-KcK" id="oqo-Xu-JQ3"/>
                         <outlet property="quackTextView" destination="JEp-BL-dpw" id="41a-bQ-1Wc"/>
                     </connections>
                 </viewController>

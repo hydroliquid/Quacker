@@ -12,6 +12,7 @@ import RSKPlaceholderTextView
 class QuackViewController: UIViewController, UITextViewDelegate
 {
     @IBOutlet weak var quackTextView: UITextView!
+    @IBOutlet weak var charCountLabel: UILabel!
     
     override func viewDidLoad()
     {
@@ -51,10 +52,21 @@ class QuackViewController: UIViewController, UITextViewDelegate
         
         // Construct what the new text would be if we allowed the user's latest edit
         let newText = NSString(string: textView.text!).replacingCharacters(in: range, with: text)
-    
+        let currenttextCount = newText.count
+        
         // TODO: Update Character Count Label
+        charCountLabel.text =
+            getCharacterAmount(currenttextCount: currenttextCount, characterLimit: characterLimit)
         
         // The new text should be allowed? True/False
-        return newText.characters.count < characterLimit
+        return newText.count < characterLimit
+    }
+    
+    func getCharacterAmount(currenttextCount: Int, characterLimit: Int) -> String
+    {
+        var leftOver: Int
+        leftOver = characterLimit - currenttextCount
+        
+        return String(leftOver)
     }
 }
