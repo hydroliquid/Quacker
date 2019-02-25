@@ -14,12 +14,13 @@ class QuackCellTableViewCell: UITableViewCell
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var quackTextContent: UILabel!
-    @IBOutlet weak var favButton: UIButton!
-    @IBOutlet weak var requackButton: UIButton!
+    @IBOutlet weak var favButton: RoundUIButton!
+    @IBOutlet weak var requackButton: RoundUIButton!
+    
     
     var favorited: Bool = false
     var quackId: Int = -1
-    
+    var requacked: Bool = false
     
     @IBAction func favQuack(_ sender: Any)
     {
@@ -38,11 +39,6 @@ class QuackCellTableViewCell: UITableViewCell
         }
     }
     
-    @IBAction func reQuack(_ sender: Any)
-    {
-        
-    }
-    
     func setFavorite(isFavorited: Bool)
     {
         favorited = isFavorited
@@ -54,6 +50,32 @@ class QuackCellTableViewCell: UITableViewCell
             favButton.setImage(UIImage(named: "favor-icon"), for: UIControl.State.normal)
         }
     }
+    
+    @IBAction func reQuack(sender: Any)
+    {
+        TwitterAPICaller.client?.requack(quackId: quackId,
+            success:
+            {self.setRequacked(isRequacked: true)},failure:{(error) in print("Error in requacking: \(error)")
+            })
+    }
+    
+    func setRequacked(isRequacked: Bool)
+    {
+        requacked = isRequacked
+        
+        if(requacked)
+        {
+            requackButton.setImage(UIImage(named: "retweet-icon-green"), for: UIControl.State.normal)
+            requackButton.isEnabled = false
+        }
+        else
+        {
+            requackButton.setImage(UIImage(named: "retweet-icon"), for: UIControl.State.normal)
+            requackButton.isEnabled = true
+        }
+    }
+    
+
     
     override func awakeFromNib()
     {

@@ -79,13 +79,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="150.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4GR-LT-f9l">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4GR-LT-f9l" customClass="RoundUIImageView" customModule="Twitter" customModuleProvider="target">
                                             <rect key="frame" x="20" y="11" width="65" height="65"/>
                                             <color key="backgroundColor" red="0.59849330359999997" green="0.0" blue="0.98367745539999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="65" id="QKu-Ga-CBe"/>
                                                 <constraint firstAttribute="width" constant="65" id="Y5j-4D-c04"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" restorationIdentifier="UserName" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eq7-7u-Jze" userLabel="UserName">
                                             <rect key="frame" x="90" y="16" width="37.333333333333343" height="18"/>
@@ -99,7 +104,7 @@
                                             <color key="textColor" red="0.72628348220000005" green="0.97642299109999997" blue="0.98367745539999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YQ-CW-G20" userLabel="LikeButton" customClass="RoundUIButton" customModule="Twitter">
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YQ-CW-G20" userLabel="LikeButton" customClass="RoundUIButton" customModule="Twitter" customModuleProvider="target">
                                             <rect key="frame" x="364" y="110" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="ntn-oY-m7u"/>
@@ -108,14 +113,14 @@
                                             <state key="normal" image="favor-icon"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="1.5"/>
+                                                    <real key="value" value="8.5"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="favQuack:" destination="8fa-yT-9Yr" eventType="touchUpInside" id="5du-1K-sMR"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRa-ad-IsT" userLabel="RequackButton" customClass="RoundUIButton" customModule="Twitter">
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRa-ad-IsT" userLabel="RequackButton" customClass="RoundUIButton" customModule="Twitter" customModuleProvider="target">
                                             <rect key="frame" x="329" y="110" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="8cm-IN-BHN"/>
@@ -124,11 +129,11 @@
                                             <state key="normal" image="retweet-icon"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="1.5"/>
+                                                    <real key="value" value="8.5"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="reQuack:" destination="8fa-yT-9Yr" eventType="touchUpInside" id="oxp-7w-ssp"/>
+                                                <action selector="reQuackWithSender:" destination="8fa-yT-9Yr" eventType="touchUpInside" id="cFN-dr-BMV"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -152,7 +157,7 @@
                                 <connections>
                                     <outlet property="favButton" destination="5YQ-CW-G20" id="of2-cB-tpV"/>
                                     <outlet property="quackTextContent" destination="blk-50-nOX" id="jrG-5q-zfE"/>
-                                    <outlet property="requackButton" destination="LRa-ad-IsT" id="bly-o5-092"/>
+                                    <outlet property="requackButton" destination="LRa-ad-IsT" id="APv-cf-qTX"/>
                                     <outlet property="userImageView" destination="4GR-LT-f9l" id="1jg-ke-Wfx"/>
                                     <outlet property="userName" destination="Eq7-7u-Jze" id="9bD-Wi-Wpw"/>
                                 </connections>

@@ -103,6 +103,7 @@ class HomeTableViewController: UITableViewController
         
         cell.setFavorite(isFavorited: quackArray[indexPath.row]["favorited"] as! Bool)
         cell.quackId = quackArray[indexPath.row]["id"] as! Int
+        cell.setRequacked(isRequacked: quackArray[indexPath.row]["retweeted"] as! Bool)
         
         return cell
     }

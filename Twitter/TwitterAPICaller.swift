@@ -89,12 +89,23 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
     {
         let myUrl = "https://api.twitter.com/1.1/favorites/destroy.json"
         
-        TwitterAPICaller.client?.post(myUrl, parameters: ["id": quackId], progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+        TwitterAPICaller.client?.post(myUrl, parameters: ["id": quackId], progress: nil,
+        success: { (task: URLSessionDataTask, response: Any?) in
             success()
         }, failure: { (task: URLSessionDataTask?, error: Error) in
             failure(error)
         })
+    }
+    func requack(quackId: Int, success: @escaping () -> (), failure: @escaping (Error) -> ())
+    {
+        let myUrl = "https://api.twitter.com/1.1/statuses/retweets/\(quackId).json"
         
+        TwitterAPICaller.client?.post(myUrl, parameters: ["id": quackId], progress: nil,
+        success: { (task: URLSessionDataTask, response: Any?) in
+            success()
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
     }
     
 }

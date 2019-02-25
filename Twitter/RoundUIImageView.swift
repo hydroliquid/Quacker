@@ -1,15 +1,14 @@
 //
-//  RoundUIButton.swift
-//  Quacker
+//  RoundUIImageView.swift
+//  Twitter
 //
-//  Created by MICHAEL BENTON on 2/14/19.
+//  Created by Js on 2/24/19.
 //  Copyright © 2019 Dan. All rights reserved.
 //
 
 import UIKit
 
-@IBDesignable
-class RoundUIButton: UIButton
+class RoundUIImageView: UIImageView
 {
     @IBInspectable var cornerRadius: CGFloat = 3.0
     {
@@ -17,29 +16,18 @@ class RoundUIButton: UIButton
             self.layer.cornerRadius = cornerRadius
         }
     }
-    
     override func awakeFromNib() {
         self.setupView()
     }
-    
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         self.setupView()
     }
-    
     func setupView()
     {
         self.layer.cornerRadius = cornerRadius
         self.clipsToBounds = true
     }
-    
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }
