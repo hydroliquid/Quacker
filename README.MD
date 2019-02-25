@@ -24,7 +24,7 @@ The following **bonus** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 
-<img src='https://github.com/hydroliquid/Quacker/blob/Upload-1/Quacker.gif' width='250'itle='Video Walkthrough' alt='Video Walkthrough' />
+<img src='https://github.com/hydroliquid/Quacker/blob/Upload-1/Quacker.gif' width='250' title='Video Walkthrough' alt='Video Walkthrough' />
 
 # Twitter - Part II
 
