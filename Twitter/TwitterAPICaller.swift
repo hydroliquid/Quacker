@@ -98,7 +98,7 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
     }
     func requack(quackId: Int, success: @escaping () -> (), failure: @escaping (Error) -> ())
     {
-        let myUrl = "https://api.twitter.com/1.1/statuses/retweets/\(quackId).json"
+        let myUrl = "https://api.twitter.com/1.1/statuses/retweet/\(quackId).json"
         
         TwitterAPICaller.client?.post(myUrl, parameters: ["id": quackId], progress: nil,
         success: { (task: URLSessionDataTask, response: Any?) in

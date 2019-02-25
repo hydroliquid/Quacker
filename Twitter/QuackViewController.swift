@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import RSKPlaceholderTextView
 
-class QuackViewController: UIViewController
+class QuackViewController: UIViewController, UITextViewDelegate
 {
     @IBOutlet weak var quackTextView: UITextView!
     
@@ -16,6 +17,8 @@ class QuackViewController: UIViewController
     {
         super.viewDidLoad()
         quackTextView.becomeFirstResponder()
+        quackTextView.delegate = self
+        
         // Do any additional setup after loading the view.
     }
 
@@ -38,5 +41,20 @@ class QuackViewController: UIViewController
         }else{
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        // TODO: Check the proposed new text character count
+        // Allow or disallow the new text
+        // Set the max character limit
+        let characterLimit = 140
+        
+        // Construct what the new text would be if we allowed the user's latest edit
+        let newText = NSString(string: textView.text!).replacingCharacters(in: range, with: text)
+    
+        // TODO: Update Character Count Label
+        
+        // The new text should be allowed? True/False
+        return newText.characters.count < characterLimit
     }
 }
