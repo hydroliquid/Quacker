@@ -38,7 +38,7 @@ The following **required** functionality is completed:
 
 - [x] user can compose a tweet. (4pts)
 - [x] User can favorite a tweet. (4pts)
-- [] User can retweet a tweet. (2pts)
+- [x] User can retweet a tweet. (2pts)
 
 The following **bonus** features are implemented:
 
