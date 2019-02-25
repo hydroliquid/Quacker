@@ -87,36 +87,72 @@
                                                 <constraint firstAttribute="width" constant="65" id="Y5j-4D-c04"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="UserName" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eq7-7u-Jze" userLabel="UserName">
-                                            <rect key="frame" x="93" y="11" width="37.333333333333343" height="26"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="26" id="2YJ-cA-ggt"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" restorationIdentifier="UserName" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eq7-7u-Jze" userLabel="UserName">
+                                            <rect key="frame" x="90" y="16" width="37.333333333333343" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.72628348217142857" green="0.9764229910714286" blue="0.98367745539999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="QuackText" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blk-50-nOX" userLabel="QuackText">
-                                            <rect key="frame" x="93" y="45" width="301" height="95"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" restorationIdentifier="QuackText" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blk-50-nOX" userLabel="QuackText">
+                                            <rect key="frame" x="90" y="39" width="299" height="14.333333333333336"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.72628348220000005" green="0.97642299109999997" blue="0.98367745539999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YQ-CW-G20" userLabel="LikeButton" customClass="RoundUIButton" customModule="Twitter">
+                                            <rect key="frame" x="364" y="110" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="ntn-oY-m7u"/>
+                                                <constraint firstAttribute="width" constant="30" id="xdD-sl-dKk"/>
+                                            </constraints>
+                                            <state key="normal" image="favor-icon"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="1.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="favQuack:" destination="8fa-yT-9Yr" eventType="touchUpInside" id="5du-1K-sMR"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRa-ad-IsT" userLabel="RequackButton" customClass="RoundUIButton" customModule="Twitter">
+                                            <rect key="frame" x="329" y="110" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="8cm-IN-BHN"/>
+                                                <constraint firstAttribute="width" constant="30" id="XUd-k9-RbU"/>
+                                            </constraints>
+                                            <state key="normal" image="retweet-icon"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="1.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="reQuack:" destination="8fa-yT-9Yr" eventType="touchUpInside" id="oxp-7w-ssp"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="4GR-LT-f9l" firstAttribute="leading" secondItem="4bt-gD-IFo" secondAttribute="leadingMargin" id="3aT-ma-B0f"/>
+                                        <constraint firstItem="LRa-ad-IsT" firstAttribute="top" secondItem="blk-50-nOX" secondAttribute="bottom" constant="5" id="9cs-Sv-XP2"/>
+                                        <constraint firstItem="5YQ-CW-G20" firstAttribute="bottom" secondItem="4bt-gD-IFo" secondAttribute="bottomMargin" id="ENW-Y4-hLv"/>
                                         <constraint firstItem="4GR-LT-f9l" firstAttribute="top" secondItem="4bt-gD-IFo" secondAttribute="topMargin" id="FCi-4F-bfB"/>
-                                        <constraint firstItem="blk-50-nOX" firstAttribute="top" secondItem="Eq7-7u-Jze" secondAttribute="bottom" constant="8" id="FPw-wp-lRs"/>
-                                        <constraint firstItem="blk-50-nOX" firstAttribute="bottom" secondItem="4bt-gD-IFo" secondAttribute="bottomMargin" id="Njb-pz-9dL"/>
-                                        <constraint firstItem="blk-50-nOX" firstAttribute="leading" secondItem="4GR-LT-f9l" secondAttribute="trailing" constant="8" id="Yz2-Q9-058"/>
-                                        <constraint firstItem="Eq7-7u-Jze" firstAttribute="leading" secondItem="4GR-LT-f9l" secondAttribute="trailing" constant="8" id="cTj-NL-cvQ"/>
-                                        <constraint firstItem="blk-50-nOX" firstAttribute="trailing" secondItem="4bt-gD-IFo" secondAttribute="trailingMargin" id="ol3-du-Q0K"/>
-                                        <constraint firstItem="Eq7-7u-Jze" firstAttribute="top" secondItem="4bt-gD-IFo" secondAttribute="topMargin" id="tsc-OF-i1e"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="blk-50-nOX" secondAttribute="trailing" constant="5" id="K2T-Br-tfZ"/>
+                                        <constraint firstItem="5YQ-CW-G20" firstAttribute="leading" secondItem="LRa-ad-IsT" secondAttribute="trailing" constant="5" id="LcX-Ok-peG"/>
+                                        <constraint firstItem="Eq7-7u-Jze" firstAttribute="top" secondItem="4bt-gD-IFo" secondAttribute="topMargin" constant="5" id="P9c-4m-4pS"/>
+                                        <constraint firstItem="5YQ-CW-G20" firstAttribute="trailing" secondItem="4bt-gD-IFo" secondAttribute="trailingMargin" id="Wga-Xf-SHc"/>
+                                        <constraint firstItem="Eq7-7u-Jze" firstAttribute="leading" secondItem="4GR-LT-f9l" secondAttribute="trailing" constant="5" id="aw9-KY-HLF"/>
+                                        <constraint firstItem="blk-50-nOX" firstAttribute="top" secondItem="Eq7-7u-Jze" secondAttribute="bottom" constant="5" id="eAW-cl-F0X"/>
+                                        <constraint firstItem="5YQ-CW-G20" firstAttribute="top" secondItem="blk-50-nOX" secondAttribute="bottom" constant="5" id="iJ3-mt-2S8"/>
+                                        <constraint firstItem="LRa-ad-IsT" firstAttribute="bottom" secondItem="4bt-gD-IFo" secondAttribute="bottomMargin" id="piO-4H-wwf"/>
+                                        <constraint firstItem="blk-50-nOX" firstAttribute="leading" secondItem="4GR-LT-f9l" secondAttribute="trailing" constant="5" id="rAE-bR-UBA"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
+                                    <outlet property="favButton" destination="5YQ-CW-G20" id="of2-cB-tpV"/>
                                     <outlet property="quackTextContent" destination="blk-50-nOX" id="jrG-5q-zfE"/>
+                                    <outlet property="requackButton" destination="LRa-ad-IsT" id="bly-o5-092"/>
                                     <outlet property="userImageView" destination="4GR-LT-f9l" id="1jg-ke-Wfx"/>
                                     <outlet property="userName" destination="Eq7-7u-Jze" id="9bD-Wi-Wpw"/>
                                 </connections>
@@ -133,16 +169,64 @@
                                 <action selector="onLogout:" destination="t5w-Ff-Ygz" id="ozO-la-qFT"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="post" id="Wak-Xo-qp4">
+                            <connections>
+                                <segue destination="3Z3-kx-2yA" kind="presentation" id="HGs-yQ-5eZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="900-A0-fdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1747.826086956522" y="106.47321428571428"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Quack View Controller-->
+        <scene sceneID="jiN-ve-GJY">
+            <objects>
+                <viewController id="UcW-cM-pg0" customClass="QuackViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G48-UY-O64">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JEp-BL-dpw">
+                                <rect key="frame" x="20" y="105" width="374" height="157"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.72628348220000005" green="0.97642299109999997" blue="0.98367745539999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.59849330359999997" green="0.0" blue="0.98367745539999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="LQc-uh-IFk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QSj-Ay-a5w">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="5jY-4J-gcZ">
+                            <color key="tintColor" red="0.66700436009999997" green="0.21416846749999999" blue="0.98814040420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cancel:" destination="UcW-cM-pg0" id="6HE-wg-NMe"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Quack" id="ldb-Dt-Jkq">
+                            <color key="tintColor" red="0.66700436009999997" green="0.21416846749999999" blue="0.98814040420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="quack:" destination="UcW-cM-pg0" id="k8n-X9-dDi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="quackTextView" destination="JEp-BL-dpw" id="41a-bQ-1Wc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0IA-HT-NRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1747.826086956522" y="822.99107142857144"/>
+        </scene>
+        <!--Home Navigation Controller-->
         <scene sceneID="Dwx-5A-rde">
             <objects>
-                <navigationController id="Ke3-KY-Cg5" sceneMemberID="viewController">
+                <navigationController id="Ke3-KY-Cg5" userLabel="Home Navigation Controller" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lwg-ea-abZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -161,5 +245,31 @@
             </objects>
             <point key="canvasLocation" x="832" y="107"/>
         </scene>
+        <!--Quack Navigation Controller-->
+        <scene sceneID="aQF-rW-UCI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Z3-kx-2yA" userLabel="Quack Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XjN-DL-VhY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.66700436014922149" green="0.21416846746843904" blue="0.98814040422439575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UcW-cM-pg0" kind="relationship" relationship="rootViewController" id="vNc-Mx-7Lz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wkn-ve-Ftd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="823"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="favor-icon" width="30" height="30"/>
+        <image name="retweet-icon" width="30" height="30"/>
+    </resources>
 </document>

@@ -13,6 +13,7 @@
 		4B11CD8D2221D9A4002E5E15 /* QuackCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B11CD8C2221D9A3002E5E15 /* QuackCellTableViewCell.swift */; };
 		4B11CD8F2221D9AB002E5E15 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B11CD8E2221D9AB002E5E15 /* LoginViewController.swift */; };
 		4B11CD922221D9B3002E5E15 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B11CD902221D9B3002E5E15 /* HomeTableViewController.swift */; };
+		4BA05A9622231C4B00D31C81 /* QuackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA05A9522231C4B00D31C81 /* QuackViewController.swift */; };
 		504CFC1F641D05B5D40A0F17 /* Pods_Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872C2D82F41D5A5D2A920E9E /* Pods_Twitter.framework */; };
 		6EBCF52621DF07FC00451C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCF52521DF07FC00451C03 /* AppDelegate.swift */; };
 		6EBCF52B21DF07FC00451C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCF52921DF07FC00451C03 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		4B11CD8C2221D9A3002E5E15 /* QuackCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuackCellTableViewCell.swift; sourceTree = "<group>"; };
 		4B11CD8E2221D9AB002E5E15 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4B11CD902221D9B3002E5E15 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		4BA05A9522231C4B00D31C81 /* QuackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuackViewController.swift; sourceTree = "<group>"; };
 		4CEB8A6500C9DFD9CEF16FBF /* Pods-Twitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter/Pods-Twitter.debug.xcconfig"; sourceTree = "<group>"; };
 		6EBCF52221DF07FC00451C03 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBCF52521DF07FC00451C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				4B11CD8C2221D9A3002E5E15 /* QuackCellTableViewCell.swift */,
 				37D29B8521F90E3400984A88 /* Assets.xcassets */,
 				6EBCF53121DF07FE00451C03 /* Info.plist */,
+				4BA05A9522231C4B00D31C81 /* QuackViewController.swift */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				4B11CD892221D92C002E5E15 /* TwitterAPICaller.swift in Sources */,
 				4B11CD8F2221D9AB002E5E15 /* LoginViewController.swift in Sources */,
 				4B11CD8D2221D9A4002E5E15 /* QuackCellTableViewCell.swift in Sources */,
+				4BA05A9622231C4B00D31C81 /* QuackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
