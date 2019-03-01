@@ -64,4 +64,48 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
         })
     }
     
+    func postQuack(quackString: String, success: @escaping () -> (), failure: @escaping (Error) -> ())
+    {
+        let myUrl = "https://api.twitter.com/1.1/statuses/update.json"
+    
+    TwitterAPICaller.client?.post(myUrl, parameters: ["status": quackString], progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            success()
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+    }
+    func favoriteQuack(quackId: Int, success: @escaping () -> (), failure: @escaping (Error) -> ())
+    {
+        let myUrl = "https://api.twitter.com/1.1/favorites/create.json"
+        
+        TwitterAPICaller.client?.post(myUrl, parameters: ["id": quackId], progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            success()
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+
+    }
+    func unfavoriteQuack(quackId: Int, success: @escaping () -> (), failure: @escaping (Error) -> ())
+    {
+        let myUrl = "https://api.twitter.com/1.1/favorites/destroy.json"
+        
+        TwitterAPICaller.client?.post(myUrl, parameters: ["id": quackId], progress: nil,
+        success: { (task: URLSessionDataTask, response: Any?) in
+            success()
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+    }
+    func requack(quackId: Int, success: @escaping () -> (), failure: @escaping (Error) -> ())
+    {
+        let myUrl = "https://api.twitter.com/1.1/statuses/retweet/\(quackId).json"
+        
+        TwitterAPICaller.client?.post(myUrl, parameters: ["id": quackId], progress: nil,
+        success: { (task: URLSessionDataTask, response: Any?) in
+            success()
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+    }
+    
 }

@@ -25,6 +25,11 @@ class HomeTableViewController: UITableViewController
         tableView.refreshControl = myRefreshControl
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadQuacks()
+    }
+    
     @objc func loadQuacks()
     {
         numberOfQuacks = 20
@@ -95,6 +100,10 @@ class HomeTableViewController: UITableViewController
         if let imageData = data {
             cell.userImageView.image = UIImage(data: imageData)
         }
+        
+        cell.setFavorite(isFavorited: quackArray[indexPath.row]["favorited"] as! Bool)
+        cell.quackId = quackArray[indexPath.row]["id"] as! Int
+        cell.setRequacked(isRequacked: quackArray[indexPath.row]["retweeted"] as! Bool)
         
         return cell
     }
